@@ -8,6 +8,14 @@ AI-Powered Plant Health Tracking & Growth Analysis Application
 
 Plant Analysis Lab is a comprehensive web application that uses AI vision models to analyze plant images and track growth over time. Built with Next.js and deployed on GitHub Pages, it provides professional-grade plant health monitoring with a clean, responsive interface inspired by modern grow tracking platforms.
 
+## 📸 Screenshots
+
+### Main Interface
+![Plant Analysis Lab - Homepage](https://github.com/user-attachments/assets/dae9171f-b747-47b3-b785-48ff06739022)
+
+### My Plants Dashboard
+![My Plants View](https://github.com/user-attachments/assets/a599d60b-58e5-4237-b64f-3415c8659bce)
+
 ## ✨ Features
 
 ### Core Functionality
