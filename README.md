@@ -8,6 +8,8 @@ AI-Powered Plant Health Tracking & Growth Analysis Application
 
 Plant Analysis Lab is a comprehensive web application that uses AI vision models to analyze plant images and track growth over time. Built with Next.js and deployed on GitHub Pages, it provides professional-grade plant health monitoring with a clean, responsive interface inspired by modern grow tracking platforms.
 
+> 🗺️ **Want to integrate real AI image evaluation?** Check out our comprehensive [AI Integration Roadmap](./ROADMAP.md) with step-by-step implementation guides!
+
 ## 📸 Screenshots
 
 ### Main Interface
@@ -244,31 +246,22 @@ VISION_API_KEY=your-api-key
 
 ### AI Model Integration
 
-The current implementation uses mock analysis. To integrate a real vision model:
+**📍 See [ROADMAP.md](./ROADMAP.md) for detailed AI integration plan!**
 
-1. Create a GitHub Action that accepts image data
-2. Call vision API (OpenAI GPT-4 Vision, Google Vision, etc.)
-3. Parse response into the expected format
-4. Return analysis JSON
+The current implementation uses mock analysis. To integrate a real vision model, we have prepared a comprehensive roadmap with three integration options:
 
-Example workflow structure:
-```yaml
-name: Analyze Plant Image
-on:
-  workflow_dispatch:
-    inputs:
-      image_data:
-        description: 'Base64 encoded image'
-        required: true
-jobs:
-  analyze:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Call Vision API
-        run: # API call logic
-      - name: Return Analysis
-        run: # Format and return JSON
-```
+1. **Serverless Function** (Vercel/Netlify) - Recommended for quick start
+2. **GitHub Actions Workflow** - Fully automated CI/CD integration
+3. **Backend Service** (Flask/FastAPI) - For larger deployments
+
+The roadmap includes:
+- ✅ Step-by-step implementation guide (German & English)
+- ✅ Complete code examples for all options
+- ✅ Security and cost considerations
+- ✅ Testing and optimization strategies
+- ✅ Production deployment checklist
+
+**Quick Start:** Check out the working Python script in `scripts/analyze_plant.py` that demonstrates real OpenAI GPT-4 Vision integration.
 
 ## 🤝 Contributing
 
