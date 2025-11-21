@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { PlantHistory } from '@/types';
 import { getAllPlants, deletePlant } from '@/lib/storage';
 
@@ -75,14 +76,20 @@ export default function PlantList({ onSelectPlant, refreshTrigger }: PlantListPr
               </button>
             </div>
             
-            {plant.analyses[plant.analyses.length - 1].image_url && (
-              <div className="plant-card-image">
-                <img 
-                  src={plant.analyses[plant.analyses.length - 1].image_url} 
-                  alt={plant.plant_id} 
-                />
-              </div>
-            )}
+            {(() => {
+              const imageUrl = plant.analyses[plant.analyses.length - 1].image_url;
+              return imageUrl ? (
+                <div className="plant-card-image">
+                  <Image 
+                    src={imageUrl} 
+                    alt={plant.plant_id}
+                    width={400}
+                    height={300}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
+                </div>
+              ) : null;
+            })()}
             
             <div className="plant-card-info">
               <div className="info-row">

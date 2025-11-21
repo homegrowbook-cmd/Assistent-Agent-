@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { PlantAnalysis } from '@/types';
 
 interface AnalysisResultProps {
@@ -31,11 +32,14 @@ export default function AnalysisResult({ analysis }: AnalysisResultProps) {
         </div>
       </div>
 
-      {analysis.image_url && (
-        <div className="result-image">
-          <img src={analysis.image_url} alt="Analyzed plant" />
-        </div>
-      )}
+      {(() => {
+        const imageUrl = analysis.image_url;
+        return imageUrl ? (
+          <div className="result-image">
+            <Image src={imageUrl} alt="Analyzed plant" width={800} height={600} style={{ width: '100%', height: 'auto' }} />
+          </div>
+        ) : null;
+      })()}
 
       <div className="health-score">
         <div className="score-label">Overall Health Score</div>

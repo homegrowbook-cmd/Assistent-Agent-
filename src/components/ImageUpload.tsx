@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, ChangeEvent } from 'react';
+import Image from 'next/image';
 import { analyzePlantImage } from '@/lib/analysis';
 import { saveAnalysis, getPlantHistory } from '@/lib/storage';
 import { PlantAnalysis } from '@/types';
@@ -91,7 +92,7 @@ export default function ImageUpload({ onAnalysisComplete }: ImageUploadProps) {
 
       {selectedImage && (
         <div className="image-preview">
-          <img src={selectedImage} alt="Selected plant" />
+          <Image src={selectedImage} alt="Selected plant" width={800} height={600} style={{ width: '100%', height: 'auto' }} />
         </div>
       )}
 
