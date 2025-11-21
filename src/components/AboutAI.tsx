@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 
+const ROADMAP_URL = 'https://github.com/homegrowbook-cmd/Assistent-Agent-/blob/main/ROADMAP.md';
+
 export default function AboutAI() {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -68,11 +70,11 @@ export default function AboutAI() {
             <h3>🔬 Echte KI-Integration / Real AI Integration</h3>
             <p>
               <strong>DE:</strong> Für echte Bildauswertung mit KI-Modellen (z.B. OpenAI GPT-4 Vision) 
-              siehe die <a href="https://github.com/homegrowbook-cmd/Assistent-Agent-/blob/main/ROADMAP.md" target="_blank" rel="noopener noreferrer">ROADMAP.md</a> für:
+              siehe die <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer">ROADMAP.md</a> für:
             </p>
             <p>
               <strong>EN:</strong> For real image analysis with AI models (e.g., OpenAI GPT-4 Vision), 
-              see <a href="https://github.com/homegrowbook-cmd/Assistent-Agent-/blob/main/ROADMAP.md" target="_blank" rel="noopener noreferrer">ROADMAP.md</a> for:
+              see <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer">ROADMAP.md</a> for:
             </p>
             <ul>
               <li>🔧 Serverless Function Setup (Vercel/Netlify)</li>
