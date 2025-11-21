@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { PlantAnalysis } from '@/types';
 
 interface AnalysisResultProps {
@@ -34,7 +33,7 @@ export default function AnalysisResult({ analysis }: AnalysisResultProps) {
 
       {analysis.image_url && (
         <div className="result-image">
-          <Image src={analysis.image_url} alt="Analyzed plant" width={800} height={600} style={{ width: '100%', height: 'auto' }} />
+          <img src={analysis.image_url} alt="Analyzed plant" style={{ width: '100%', height: 'auto' }} />
         </div>
       )}
 
