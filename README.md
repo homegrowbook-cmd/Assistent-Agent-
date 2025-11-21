@@ -191,7 +191,7 @@ Wir freuen uns über Beiträge! So kannst du helfen:
 
 ## 📝 Lizenz
 
-Dieses Projekt ist noch in Entwicklung. Lizenzinformationen folgen.
+Dieses Projekt ist unter der MIT-Lizenz lizenziert - siehe [LICENSE](LICENSE) für Details.
 
 ## 🆘 Support
 
