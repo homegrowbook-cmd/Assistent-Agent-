@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { PlantHistory, PlantAnalysis } from '@/types';
 import { getPlantHistory } from '@/lib/storage';
 
@@ -77,7 +78,7 @@ export default function PlantTimeline({ plantId, onClose }: PlantTimelineProps) 
                 
                 {analysis.image_url && (
                   <div className="timeline-image">
-                    <img src={analysis.image_url} alt={`Analysis ${index + 1}`} />
+                    <Image src={analysis.image_url} alt={`Analysis ${index + 1}`} width={600} height={400} style={{ width: '100%', height: 'auto' }} />
                   </div>
                 )}
                 
