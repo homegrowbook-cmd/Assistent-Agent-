@@ -1,0 +1,70 @@
+# Grow Documentation Assistant Configuration
+
+# Image Analysis Settings
+image_analysis:
+  supported_formats:
+    - jpg
+    - jpeg
+    - png
+  max_size_mb: 10
+  archive_after_days: 30
+  analysis_settings:
+    detect_health: true
+    detect_issues: true
+    color_analysis: true
+
+# Data Evaluation Settings
+data_evaluation:
+  check_interval_hours: 24
+  temperature_range:
+    min: 18
+    max: 28
+    unit: celsius
+  humidity_range:
+    min: 40
+    max: 70
+    unit: percent
+  auto_insights: true
+
+# Post Generation Settings
+post_generation:
+  auto_generate: true
+  include_hashtags: true
+  max_length: 500
+  platforms:
+    - instagram
+    - twitter
+    - facebook
+  default_hashtags:
+    - grow
+    - plants
+    - documentation
+    - gardening
+
+# Directory Structure
+directories:
+  uploads: images/uploads
+  analyzed: images/analyzed
+  archive: images/archive
+  data: data
+  output: output
+  docs: docs
+
+# GitHub Integration (optional)
+github:
+  enabled: false
+  repository: ""
+  auto_commit: false
+  commit_message_template: "Update: {date}"
+
+# Notifications (optional)
+notifications:
+  enabled: false
+  email: ""
+  webhook_url: ""
+
+# Schedule (optional)
+schedule:
+  enabled: false
+  daily_check_time: "09:00"
+  weekly_summary_day: "sunday"
