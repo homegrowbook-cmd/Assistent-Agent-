@@ -59,63 +59,63 @@ export default function PlantList({ onSelectPlant, refreshTrigger }: PlantListPr
     <div className="plant-list">
       <h2>Your Plants ({plants.length})</h2>
       <div className="plant-grid">
-        {plants.map((plant) => (
-          <div
-            key={plant.plant_id}
-            className="plant-card"
-            onClick={() => onSelectPlant(plant.plant_id)}
-          >
-            <div className="plant-card-header">
-              <h3>{plant.plant_name || plant.plant_id}</h3>
-              <button
-                className="delete-button"
-                onClick={(e) => handleDelete(plant.plant_id, e)}
-                title="Delete plant"
-              >
-                🗑️
-              </button>
-            </div>
-            
-            {(() => {
-              const imageUrl = plant.analyses[plant.analyses.length - 1].image_url;
-              return imageUrl ? (
+        {plants.map((plant) => {
+          const latestAnalysis = plant.analyses[plant.analyses.length - 1];
+          return (
+            <div
+              key={plant.plant_id}
+              className="plant-card"
+              onClick={() => onSelectPlant(plant.plant_id)}
+            >
+              <div className="plant-card-header">
+                <h3>{plant.plant_name || plant.plant_id}</h3>
+                <button
+                  className="delete-button"
+                  onClick={(e) => handleDelete(plant.plant_id, e)}
+                  title="Delete plant"
+                >
+                  🗑️
+                </button>
+              </div>
+              
+              {latestAnalysis.image_url && (
                 <div className="plant-card-image">
                   <Image 
-                    src={imageUrl} 
+                    src={latestAnalysis.image_url} 
                     alt={plant.plant_id}
                     width={400}
                     height={300}
                     style={{ width: '100%', height: 'auto' }}
                   />
                 </div>
-              ) : null;
-            })()}
-            
-            <div className="plant-card-info">
-              <div className="info-row">
-                <span className="info-label">Health Score:</span>
-                <span 
-                  className="info-value"
-                  style={{ color: getHealthColor(getLatestScore(plant)) }}
-                >
-                  {getLatestScore(plant)}/100
-                </span>
-              </div>
+              )}
               
-              <div className="info-row">
-                <span className="info-label">Analyses:</span>
-                <span className="info-value">{plant.analyses.length}</span>
-              </div>
-              
-              <div className="info-row">
-                <span className="info-label">Last Updated:</span>
-                <span className="info-value">
-                  {new Date(plant.analyses[plant.analyses.length - 1].timestamp).toLocaleDateString()}
-                </span>
+              <div className="plant-card-info">
+                <div className="info-row">
+                  <span className="info-label">Health Score:</span>
+                  <span 
+                    className="info-value"
+                    style={{ color: getHealthColor(getLatestScore(plant)) }}
+                  >
+                    {getLatestScore(plant)}/100
+                  </span>
+                </div>
+                
+                <div className="info-row">
+                  <span className="info-label">Analyses:</span>
+                  <span className="info-value">{plant.analyses.length}</span>
+                </div>
+                
+                <div className="info-row">
+                  <span className="info-label">Last Updated:</span>
+                  <span className="info-value">
+                    {new Date(latestAnalysis.timestamp).toLocaleDateString()}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

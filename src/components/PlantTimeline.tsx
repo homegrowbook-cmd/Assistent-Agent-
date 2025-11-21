@@ -76,14 +76,11 @@ export default function PlantTimeline({ plantId, onClose }: PlantTimelineProps) 
                   {new Date(analysis.timestamp).toLocaleString()}
                 </div>
                 
-                {(() => {
-                  const imageUrl = analysis.image_url;
-                  return imageUrl ? (
-                    <div className="timeline-image">
-                      <Image src={imageUrl} alt={`Analysis ${index + 1}`} width={600} height={400} style={{ width: '100%', height: 'auto' }} />
-                    </div>
-                  ) : null;
-                })()}
+                {analysis.image_url && (
+                  <div className="timeline-image">
+                    <Image src={analysis.image_url} alt={`Analysis ${index + 1}`} width={600} height={400} style={{ width: '100%', height: 'auto' }} />
+                  </div>
+                )}
                 
                 <div className="timeline-score">
                   <span>Health Score: </span>

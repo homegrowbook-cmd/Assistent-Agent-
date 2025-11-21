@@ -32,14 +32,11 @@ export default function AnalysisResult({ analysis }: AnalysisResultProps) {
         </div>
       </div>
 
-      {(() => {
-        const imageUrl = analysis.image_url;
-        return imageUrl ? (
-          <div className="result-image">
-            <Image src={imageUrl} alt="Analyzed plant" width={800} height={600} style={{ width: '100%', height: 'auto' }} />
-          </div>
-        ) : null;
-      })()}
+      {analysis.image_url && (
+        <div className="result-image">
+          <Image src={analysis.image_url} alt="Analyzed plant" width={800} height={600} style={{ width: '100%', height: 'auto' }} />
+        </div>
+      )}
 
       <div className="health-score">
         <div className="score-label">Overall Health Score</div>
