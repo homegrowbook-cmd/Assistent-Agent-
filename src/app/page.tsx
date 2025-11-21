@@ -5,6 +5,7 @@ import ImageUpload from '@/components/ImageUpload';
 import AnalysisResult from '@/components/AnalysisResult';
 import PlantList from '@/components/PlantList';
 import PlantTimeline from '@/components/PlantTimeline';
+import AboutAI from '@/components/AboutAI';
 import { PlantAnalysis } from '@/types';
 
 export default function Home() {
@@ -47,6 +48,8 @@ export default function Home() {
           🌿 My Plants
         </button>
       </nav>
+
+      <AboutAI />
 
       <div className="content-container">
         {activeView === 'upload' ? (
