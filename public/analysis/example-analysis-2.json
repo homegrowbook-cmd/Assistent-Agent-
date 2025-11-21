@@ -1,0 +1,21 @@
+{
+  "timestamp": "2024-01-22T14:45:00.000Z",
+  "plant_id": "example-plant-001",
+  "image_url": "data:image/placeholder",
+  "analysis": {
+    "flower_volume": "Very High",
+    "flower_density": "Very Dense",
+    "color_health": "Deep green with good vitality",
+    "leaf_condition": "Pristine - no visible damage",
+    "stress_signs": "No significant stress",
+    "general_structure": "Excellent canopy development",
+    "trichome_development": "Dense trichome coverage, mostly cloudy",
+    "overall_health_score": 95
+  },
+  "changes_detected": {
+    "growth_change": "Noticeable increase in flower volume and density",
+    "density_change": "Flower density has increased by approximately 15%",
+    "color_change": "Color vibrancy maintained with slight improvement",
+    "health_trend": "improved"
+  }
+}
