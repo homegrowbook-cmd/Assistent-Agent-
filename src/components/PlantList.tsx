@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import { PlantHistory } from '@/types';
 import { getAllPlants, deletePlant } from '@/lib/storage';
 
@@ -80,11 +79,9 @@ export default function PlantList({ onSelectPlant, refreshTrigger }: PlantListPr
               
               {latestAnalysis.image_url && (
                 <div className="plant-card-image">
-                  <Image 
+                  <img 
                     src={latestAnalysis.image_url} 
                     alt={plant.plant_id}
-                    width={400}
-                    height={300}
                     style={{ width: '100%', height: 'auto' }}
                   />
                 </div>
