@@ -47,15 +47,18 @@ logs/
 *.tmp
 .cache/
 
-# Data files (keep structure, ignore contents except README)
+# Data files (keep structure, ignore contents except README and examples)
 data/*.json
+!data/example_data.json
 data/*.csv
 data/*.db
 
-# Archived images (keep originals in uploads)
+# Archived images (keep originals in uploads, but keep README files)
 images/analyzed/*
+!images/analyzed/README.md
 !images/analyzed/.gitkeep
 images/archive/*
+!images/archive/README.md
 !images/archive/.gitkeep
 
 # Environment variables

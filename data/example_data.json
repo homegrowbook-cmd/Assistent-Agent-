@@ -1,0 +1,31 @@
+{
+  "environment": {
+    "temperature": 24,
+    "humidity": 55,
+    "light_hours": 18,
+    "date": "2025-11-21",
+    "ph": 6.5,
+    "ec": 1.2
+  },
+  "growth": {
+    "height": 25,
+    "width": 20,
+    "stage": "vegetative",
+    "health": "good",
+    "leaf_count": 8,
+    "days_since_germination": 14
+  },
+  "history": [
+    {
+      "date": "2025-11-14",
+      "height": 18,
+      "notes": "Erste Woche vegetativ, kräftiges Wachstum"
+    },
+    {
+      "date": "2025-11-07",
+      "height": 8,
+      "notes": "Keimung erfolgreich"
+    }
+  ],
+  "notes": "Pflanze entwickelt sich gut. Temperatur und Luftfeuchtigkeit im optimalen Bereich."
+}
