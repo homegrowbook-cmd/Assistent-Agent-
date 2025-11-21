@@ -1,0 +1,15 @@
+{
+  "timestamp": "2024-01-15T10:30:00.000Z",
+  "plant_id": "example-plant-001",
+  "image_url": "data:image/placeholder",
+  "analysis": {
+    "flower_volume": "High",
+    "flower_density": "Dense",
+    "color_health": "Vibrant green with healthy coloration",
+    "leaf_condition": "Excellent - minor edge browning",
+    "stress_signs": "No stress indicators detected",
+    "general_structure": "Well-developed branching structure",
+    "trichome_development": "Cloudy trichomes with 10% amber",
+    "overall_health_score": 92
+  }
+}
